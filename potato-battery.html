@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🥔 Potato (or Lemon) Battery → LED Voltmeter Lab</title>
+    <meta charset="utf-8" />
+    <style>
+        body { background: #f0f8ff; font-family: sans-serif; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 40px auto; background: #e0eafc; border-radius: 18px; box-shadow: 0 4px 16px rgba(44,62,80,0.10); padding: 32px 24px; }
+        h1, h2 { color: #2a3b4c; text-align: center; }
+        .back-btn { display: inline-block; margin-bottom: 24px; background: linear-gradient(90deg, #4f8cff 0%, #38e8ff 100%); color: #fff; font-size: 1em; font-weight: bold; padding: 10px 24px; border: none; border-radius: 12px; box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12); cursor: pointer; transition: background 0.3s; text-decoration: none; }
+        .back-btn:hover { background: linear-gradient(90deg, #38e8ff 0%, #4f8cff 100%); }
+        .guide-section { background: #f7fbff; border-radius: 12px; padding: 18px 16px; margin-bottom: 18px; }
+        ul, ol { margin-left: 18px; }
+        code, pre { background: #dbeafe; border-radius: 6px; padding: 2px 6px; font-family: 'Fira Mono', 'Consolas', monospace; }
+        a { color: #4f8cff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="projects.html" class="back-btn">&larr; Back</a>
+        <h1>🥔 Potato (or Lemon) Battery → LED Voltmeter Lab</h1>
+
+        <div class="guide-section">
+            <h2>Overview</h2>
+            <p><strong>Difficulty:</strong> Easy<br>
+               <strong>Discipline:</strong> Electrochemistry (redox, internal resistance)<br>
+               <strong>Core value learned:</strong> How two dissimilar metals in an electrolyte create a galvanic cell, and why internal resistance limits current.</p>
+        </div>
+
+        <div class="guide-section">
+            <h2>Tools & Parts</h2>
+            <ul>
+                <li>2 potatoes (or lemons), zinc (galvanized nail), copper (penny/copper wire) for each cell</li>
+                <li>Alligator leads, multimeter, 5 mm super-bright LED (or a small digital voltmeter module)</li>
+                <li>Resistor ~220 Ω for LED testing; optional breadboard</li>
+            </ul>
+        </div>
+
+        <div class="guide-section">
+            <h2>Build Steps</h2>
+            <ol>
+                <li><strong>Electrodes:</strong> Push one zinc and one copper into each potato, not touching.</li>
+                <li><strong>Measure one cell:</strong> Put the multimeter across Zn/Cu; you’ll see ~0.7–1.0 V open-circuit.</li>
+                <li><strong>Series chain:</strong> Wire two or three potatoes in series (Zn→Cu→Zn→Cu) and measure ~2–3 V.</li>
+                <li><strong>LED test:</strong> Try to light an LED through a 220 Ω resistor. Many potato cells can’t supply enough current for typical LEDs; that’s the internal resistance lesson.</li>
+                <li><strong>Troubleshoot:</strong> Increase electrode area (sand clean), reduce spacing, or try parallel cells to increase current.</li>
+            </ol>
+        </div>
+
+        <div class="guide-section">
+            <h2>Why It Works</h2>
+            <p>Zinc oxidizes (releases electrons), hydrogen ions in the potato are reduced at copper — that potential difference drives current through your circuit. But the potato is a weak electrolyte with high internal resistance, so the LED may be dim or not light at all — that’s real-world battery engineering.</p>
+        </div>
+
+        <div class="guide-section">
+            <h2>Safety</h2>
+            <ul>
+                <li>Don’t eat the potatoes afterward. Wash hands; copper/zinc can leave residues.</li>
+            </ul>
+        </div>
+
+        <div class="guide-section">
+            <h2>Extensions</h2>
+            <ul>
+                <li>Build a simple joule thief boost circuit to light an LED from weak cells.</li>
+                <li>Compare electrolytes (salt water vs vinegar vs lemon juice).</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

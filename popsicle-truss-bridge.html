@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🌉 Popsicle-Stick Truss Bridge — DIY Load Test</title>
+    <meta charset="utf-8" />
+    <style>
+        body { background: #f0f8ff; font-family: sans-serif; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 40px auto; background: #e0eafc; border-radius: 18px; box-shadow: 0 4px 16px rgba(44,62,80,0.10); padding: 32px 24px; }
+        h1, h2 { color: #2a3b4c; text-align: center; }
+        .back-btn { display: inline-block; margin-bottom: 24px; background: linear-gradient(90deg, #4f8cff 0%, #38e8ff 100%); color: #fff; font-size: 1em; font-weight: bold; padding: 10px 24px; border: none; border-radius: 12px; box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12); cursor: pointer; transition: background 0.3s; text-decoration: none; }
+        .back-btn:hover { background: linear-gradient(90deg, #38e8ff 0%, #4f8cff 100%); }
+        .guide-section { background: #f7fbff; border-radius: 12px; padding: 18px 16px; margin-bottom: 18px; }
+        ul, ol { margin-left: 18px; }
+        code, pre { background: #dbeafe; border-radius: 6px; padding: 2px 6px; font-family: 'Fira Mono', 'Consolas', monospace; }
+        a { color: #4f8cff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="projects.html" class="back-btn">&larr; Back</a>
+        <h1>🌉 Popsicle-Stick Truss Bridge — DIY Load Test</h1>
+
+        <div class="guide-section">
+            <h2>Overview</h2>
+            <p><strong>Difficulty:</strong> Easy<br>
+               <strong>Discipline:</strong> Civil/Structural (tension, compression, trusses)<br>
+               <strong>Core value learned:</strong> How triangulation channels loads into predictable tension/compression paths, and why members buckle.</p>
+            <p><strong>Reference tutorial:</strong> <a href="https://www.youtube.com/watch?v=V2duNLaNyDE" target="_blank">visual guide to building a truss bridge</a></p>
+        </div>
+
+        <div class="guide-section">
+            <h2>What You’re Building</h2>
+            <p>A model bridge (~40–60 cm span) using popsicle sticks + wood glue. You’ll try a Pratt, Warren, or Howe truss and test which carries the most load for its weight (efficiency).</p>
+        </div>
+
+        <div class="guide-section">
+            <h2>Tools & Materials</h2>
+            <ul>
+                <li>150–250 craft sticks; PVA/wood glue</li>
+                <li>Wax paper (to keep glue from sticking to table)</li>
+                <li>Printed side-view templates of trusses (Pratt/Warren/Howe)</li>
+                <li>Binder clips/rubber bands (clamps), ruler, triangle or book edge</li>
+                <li>Load test items: a bucket + sand/water or barbell plates; luggage scale (optional)</li>
+            </ul>
+        </div>
+
+        <div class="guide-section">
+            <h2>Before You Build — Core Ideas</h2>
+            <ul>
+                <li><strong>Why triangles?</strong> A triangle is geometrically rigid; a rectangle isn’t without a diagonal.</li>
+                <li><strong>Tension vs compression:</strong> Bottom chord is often in tension, top chord in compression under mid-span load; diagonals depend on truss type.</li>
+                <li><strong>Buckling:</strong> Long slender members fail in compression by buckling; shorten unsupported length with internal triangulation.</li>
+            </ul>
+        </div>
+
+        <div class="guide-section">
+            <h2>Step-by-Step Build</h2>
+            <ol>
+                <li><strong>Template &amp; halves:</strong> Tape a printed truss template to the table, cover with wax paper. Glue sticks flat following the outline to make two identical side trusses. Use clips as clamps.</li>
+                <li><strong>Double up key members:</strong> Laminate two sticks where compression is highest (top chord/diagonals).</li>
+                <li><strong>Cure fully:</strong> Let dry overnight. Rushing this causes joint failures.</li>
+                <li><strong>Deck &amp; cross-bracing:</strong>
+                    <ul>
+                        <li>Connect the two side trusses with cross members at top/bottom (make a box).</li>
+                        <li>Add lateral bracing (X-braces) between sides to prevent side-sway.</li>
+                    </ul>
+                </li>
+                <li><strong>Load pad:</strong> Add a small plate of cardboard at mid-span to apply load evenly.</li>
+            </ol>
+        </div>
+
+        <div class="guide-section">
+            <h2>Testing (and Not Breaking Too Early)</h2>
+            <ol>
+                <li>Place bridge between tables. Hang bucket at mid-span. Add water/sand in steps, record total mass at failure.</li>
+                <li>Note failure mode: Did a top chord buckle? Did a joint peel? Which diagonal snapped? That tells you where to reinforce next time.</li>
+            </ol>
+        </div>
+
+        <div class="guide-section">
+            <h2>Why It Works (and How to Think Like an Engineer)</h2>
+            <p>Loads travel as axial forces along truss members; good trusses keep members in clean tension/compression and avoid bending.</p>
+            <p><strong>Efficiency</strong> = (max load carried) / (bridge mass). Great designs spread compression to short members, use tension where possible (sticks are stronger in tension than compression for the same weight).</p>
+        </div>
+
+        <div class="guide-section">
+            <h2>Safety</h2>
+            <ul>
+                <li>Wood glue is mild, but sharp splinters are not—sand rough edges; eye protection during break tests.</li>
+            </ul>
+        </div>
+
+        <div class="guide-section">
+            <h2>Extensions</h2>
+            <ul>
+                <li>Compare truss geometries (Pratt vs Warren vs Howe).</li>
+                <li>Investigate glue joint area: lap joints vs butt joints.</li>
+                <li>Add a deck arch or suspension cable and compare strength/weight.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

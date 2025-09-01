@@ -3,17 +3,316 @@
 <head>
     <link rel="stylesheet" href="young engineers.css">
     <title>Young Engineers Hub</title>
-   
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
 </head>
 <body>
+    <!-- Top-right profile section -->
+    <div id="profile-bar" style="
+        position: fixed;
+        top: 24px;
+        right: 32px;
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-family: sans-serif;
+    ">
+        <img id="profile-pic" src="https://www.gstatic.com/images/branding/product/1x/avatar_square_blue_120dp.png" alt="Profile" style="width:40px; height:40px; border-radius:50%; border:2px solid #e0eafc;">
+        <button id="signin-bar-btn" style="
+            background: linear-gradient(90deg, #4f8cff 0%, #38e8ff 100%);
+            color: #fff;
+            font-size: 1em;
+            font-weight: bold;
+            padding: 8px 18px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+            cursor: pointer;
+            transition: background 0.3s;
+        ">Sign in</button>
+        <div id="user-dropdown" style="
+            display: none;
+            position: absolute;
+            top: 52px;
+            right: 0;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(44,62,80,0.12);
+            min-width: 180px;
+            padding: 12px 0;
+            text-align: center;
+        ">
+            <button id="logout-btn" style="
+                background: #e74c3c;
+                color: #fff;
+                font-size: 1em;
+                font-weight: bold;
+                border: none;
+                border-radius: 6px;
+                padding: 8px 24px;
+                cursor: pointer;
+                margin-top: 4px;
+            ">Log out</button>
+        </div>
+    </div>
     <header>
     <h1>Young engineers club</h1>
     <div class="intro">
         <h2>Welcome to our website! We help children aged 8 and above explore engineering and creativity through many DIY projects of various levels of difficulty, including many of the basics to learning how to build, and turn your ideas to life! the photo to the right is the final project of this club - the creation of and FPV drone!  </h2>
         <img src="PXL_20250125_093809381.RAW-01.MP.COVER.jpg">
     </div>
+   <!-- Left: Start Exploring Button -->
+    <div style="display: flex; justify-content: center; align-items: center; gap: 24px; margin-top: 32px; margin-bottom: 32px;">
+    <!-- Start Exploring Button -->
+    <button id="explore-btn" style="
+        background: linear-gradient(90deg, #38e8ff 0%, #4f8cff 100%);
+        color: #fff;
+        font-size: 1em;
+        font-weight: bold;
+        padding: 10px 24px;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: background 0.3s;
+        height: 60px;
+    "
+    onmouseover="this.style.background='linear-gradient(90deg, #4f8cff 0%, #38e8ff 100%)'"
+    onmouseout="this.style.background='linear-gradient(90deg, #38e8ff 0%, #4f8cff 100%)'">
+        <span style="font-size:1.2em;">🚀</span> Start Exploring
+    </button>
+    <!-- Feature Boxes Horizontal -->
+    <div style="display: flex; gap: 16px;">
+        <div class="feature-box" style="
+            background: #e0eafc;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+            padding: 10px 12px;
+            min-width: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: background 0.3s;
+            cursor: pointer;
+            height: 60px;
+            justify-content: center;
+        " onmouseover="this.style.background='#cfdef3'" onmouseout="this.style.background='#e0eafc'">
+            <span style="font-size:1.4em;">🛠️</span>
+            <div style="margin-top: 2px; font-size:0.95em; font-weight: 500; color: #2a3b4c;">Creative Projects</div>
+        </div>
+        <div class="feature-box" style="
+            background: #e0eafc;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+            padding: 10px 12px;
+            min-width: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: background 0.3s;
+            cursor: pointer;
+            height: 60px;
+            justify-content: center;
+        " onmouseover="this.style.background='#cfdef3'" onmouseout="this.style.background='#e0eafc'">
+            <span style="font-size:1.4em;">👥</span>
+            <div style="margin-top: 2px; font-size:0.95em; font-weight: 500; color: #2a3b4c;">Multiple age groups</div>
+            <span style="font-size:0.85em; font-weight:400; color:#2a3b4c;">various levels</span>
+        </div>
+        <div class="feature-box" style="
+            background: #e0eafc;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+            padding: 10px 12px;
+            min-width: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: background 0.3s;
+            cursor: pointer;
+            height: 60px;
+            justify-content: center;
+        " onmouseover="this.style.background='#cfdef3'" onmouseout="this.style.background='#e0eafc'">
+            <span style="font-size:1.4em;">🎓</span>
+            <div style="margin-top: 2px; font-size:0.95em; font-weight: 500; color: #2a3b4c;">Learn from basics</div>
+            <span style="font-size:0.85em; font-weight:400; color:#2a3b4c;">to university-level</span>
+        </div>
+    </div>
+</div>
+</div>
+<!-- ...existing code... -->
+
+    <!-- Why Choose Section -->
+    <div style="text-align:center; margin-bottom: 40px;">
+    <h2 style="font-size:2em; color:#2a3b4c; margin-bottom: 8px;">Why choose Young Engineers Club?</h2>
+    <h4 style="font-size:1.25em; font-weight:600; color:#222; margin-bottom: 32px;">
+        Our mission is to inspire and nurture the next generation of innovative thinkers through engaging, educational experiences.
+    </h4>
+    <div style="display: flex; justify-content: center; gap: 32px;">
+        <!-- Box 1 -->
+        <div style="background: #e0eafc; border-radius: 16px; box-shadow: 0 4px 16px rgba(44,62,80,0.10); padding: 24px 18px; width: 240px; display: flex; flex-direction: column; align-items: center; transition: background 0.3s; cursor:pointer;" onmouseover="this.style.background='#cfdef3'" onmouseout="this.style.background='#e0eafc'">
+            <span style="font-size:2em; margin-bottom: 12px;">💡</span>
+            <div style="font-weight:600; margin-bottom: 8px;">Creative Problem Solving</div>
+            <div style="font-size:0.98em; color:#2a3b4c;">Learn to think outside the box and tackle challenges with innovative solutions.</div>
+        </div>
+        <!-- Box 2 -->
+        <div style="background: #e0eafc; border-radius: 16px; box-shadow: 0 4px 16px rgba(44,62,80,0.10); padding: 24px 18px; width: 240px; display: flex; flex-direction: column; align-items: center; transition: background 0.3s; cursor:pointer;" onmouseover="this.style.background='#cfdef3'" onmouseout="this.style.background='#e0eafc'">
+            <span style="font-size:2em; margin-bottom: 12px;">🔧</span>
+            <div style="font-weight:600; margin-bottom: 8px;">Hands-On Learning</div>
+            <div style="font-size:0.98em; color:#2a3b4c;">Build real projects that teach engineering principles through fun activities.</div>
+        </div>
+        <!-- Box 3 -->
+        <div style="background: #e0eafc; border-radius: 16px; box-shadow: 0 4px 16px rgba(44,62,80,0.10); padding: 24px 18px; width: 240px; display: flex; flex-direction: column; align-items: center; transition: background 0.3s; cursor:pointer;" onmouseover="this.style.background='#cfdef3'" onmouseout="this.style.background='#e0eafc'">
+            <span style="font-size:2em; margin-bottom: 12px;">👶</span>
+            <div style="font-weight:600; margin-bottom: 8px;">Age-Appropriate Content</div>
+            <div style="font-size:0.98em; color:#2a3b4c;">Projects designed specifically for different age groups and skill levels.</div>
+        </div>
+    </div>
+</div>
+
+    <!-- Sign-in overlay (hidden by default) -->
+    <div id="signin-overlay" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(44,62,80,0.25); z-index: 9999;">
+    <div style="background: #fff; max-width: 350px; margin: 120px auto; padding: 32px 28px 24px 28px; border-radius: 20px; box-shadow: 0 8px 32px rgba(44,62,80,0.18); text-align: center; position: relative;">
+        <h3 style="margin-top:0; color:#2a3b4c;">Sign in to discover all the projects</h3>
+        <div id="g_id_signin"></div>
+        <button onclick="document.getElementById('signin-overlay').style.display='none';" style="background: #4f8cff; color: #fff; font-size: 1em; border: none; border-radius: 8px; padding: 10px 28px; cursor: pointer; box-shadow: 0 2px 8px rgba(44,62,80,0.08); margin-top: 18px;">Close</button>
+    </div>
+</div>
     </header>
-    <h3>Unlock premium features!</h3>
-    <h4>get personalized help and </h4>
+<div id="donation-popup" style="
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(44,62,80,0.25);
+    z-index: 9999;
+">
+    <div style="
+        background: linear-gradient(90deg, #e0eafc 0%, #cfdef3 100%);
+        max-width: 400px;
+        margin: 80px auto;
+        padding: 32px 28px 20px 28px;
+        border-radius: 24px;
+        box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+        text-align: center;
+        position: relative;
+    ">
+        <h3 style="margin-top:0;">This website is donation-based</h3>
+        <p style="margin: 18px 0; font-size: 1.05em; color:#2a3b4c;">
+            This website is completely free of charge. But that doesn’t mean we put 
+            any less effort than a normal subscription-based website, so please help 
+            keep this club going by gifting a small donation.
+        </p>
+        <p style="font-weight: bold; margin: 18px 0;">
+            Together, we can help the next generation build a better future for everyone. Step by step.
+        </p>
+
+        <!-- PayPal Donate Button -->
+        <form action="https://www.paypal.com/donate" method="post" target="_top" style="margin-top: 20px;">
+          <!-- Replace with your real PayPal hosted_button_id -->
+          <input type="hidden" name="hosted_button_id" value="YOUR_BUTTON_ID_HERE" />
+          <input type="hidden" name="currency_code" value="GBP" />
+          <input type="submit" value="Donate with PayPal" style="
+              background: linear-gradient(90deg, #4f8cff 0%, #38e8ff 100%);
+              color: #fff;
+              font-size: 1.1em;
+              font-weight: bold;
+              padding: 14px 32px;
+              border: none;
+              border-radius: 12px;
+              box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
+              cursor: pointer;
+              margin-bottom: 16px;
+              transition: background 0.3s;
+          "
+          onmouseover="this.style.background='linear-gradient(90deg, #38e8ff 0%, #4f8cff 100%)'"
+          onmouseout="this.style.background='linear-gradient(90deg, #4f8cff 0%, #38e8ff 100%)'">
+        </form>
+
+        <button onclick="document.getElementById('donation-popup').style.display='none';" style="
+            background: #fff;
+            color: #2a3b4c;
+            font-size: 1em;
+            border: 1px solid #4f8cff;
+            border-radius: 8px;
+            padding: 8px 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+        ">Maybe later</button>
+    </div>
+</div>
+<script>
+    setTimeout(function() {
+        document.getElementById('donation-popup').style.display = 'block';
+    }, 5000);
+
+    document.getElementById('explore-btn').onclick = function() {
+    if (userEmail) {
+        window.location.href = "projects.html";
+    } else {
+        document.getElementById('signin-overlay').style.display = 'block';
+    }
+};
+
+    document.getElementById('signin-bar-btn').onclick = function() {
+        document.getElementById('signin-overlay').style.display = 'block';
+    };
+
+    // Profile bar logic
+    let userEmail = null;
+    let userPic = null;
+
+    window.onload = function() {
+        google.accounts.id.initialize({
+            client_id: "766093313001-vead9960h0ipskjcnk2mcmj67t8ebdre.apps.googleusercontent.com",
+            callback: handleCredentialResponse
+        });
+        google.accounts.id.renderButton(
+            document.getElementById("g_id_signin"),
+            { theme: "outline", size: "large" }
+        );
+    };
+
+    function handleCredentialResponse(response) {
+        // Decode JWT token to get user info
+        const payload = JSON.parse(atob(response.credential.split('.')[1]));
+        userEmail = payload.email;
+        userPic = payload.picture || "https://www.gstatic.com/images/branding/product/1x/avatar_square_blue_120dp.png";
+        document.getElementById('profile-pic').src = userPic;
+        document.getElementById('signin-bar-btn').textContent = userEmail;
+        document.getElementById('signin-overlay').style.display = 'none';
+
+        // Show dropdown on email click
+        document.getElementById('signin-bar-btn').onclick = function() {
+            const dropdown = document.getElementById('user-dropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        };
+    }
+
+    // Log out logic
+    document.getElementById('logout-btn').onclick = function() {
+        // Reset UI
+        document.getElementById('profile-pic').src = "https://www.gstatic.com/images/branding/product/1x/avatar_square_blue_120dp.png";
+        document.getElementById('signin-bar-btn').textContent = "Sign in";
+        document.getElementById('user-dropdown').style.display = 'none';
+        userEmail = null;
+        userPic = null;
+        // Restore sign-in button click
+        document.getElementById('signin-bar-btn').onclick = function() {
+            document.getElementById('signin-overlay').style.display = 'block';
+        };
+    };
+
+    // Hide dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        const dropdown = document.getElementById('user-dropdown');
+        const btn = document.getElementById('signin-bar-btn');
+        if (!dropdown.contains(e.target) && e.target !== btn) {
+            dropdown.style.display = 'none';
+        }
+    });
+</script>
 </body>
 </html>

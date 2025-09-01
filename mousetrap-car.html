@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🧰 Mousetrap-Powered Car — Lever Arms & Efficiency (Video Project)</title>
+    <meta charset="utf-8" />
+    <style>
+        body { background: #f0f8ff; font-family: sans-serif; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 40px auto; background: #e0eafc; border-radius: 18px; box-shadow: 0 4px 16px rgba(44,62,80,0.10); padding: 32px 24px; }
+        h1, h2 { color: #2a3b4c; text-align: center; }
+        .back-btn { display: inline-block; margin-bottom: 24px; background: linear-gradient(90deg, #4f8cff 0%, #38e8ff 100%); color: #fff; font-size: 1em; font-weight: bold; padding: 10px 24px; border: none; border-radius: 12px; box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12); cursor: pointer; transition: background 0.3s; text-decoration: none; }
+        .back-btn:hover { background: linear-gradient(90deg, #38e8ff 0%, #4f8cff 100%); }
+        .guide-section { background: #f7fbff; border-radius: 12px; padding: 18px 16px; margin-bottom: 18px; }
+        ul, ol { margin-left: 18px; }
+        code, pre { background: #dbeafe; border-radius: 6px; padding: 2px 6px; font-family: 'Fira Mono', 'Consolas', monospace; }
+        a { color: #4f8cff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="projects.html" class="back-btn">&larr; Back</a>
+        <h1>🧰 Mousetrap-Powered Car — Lever Arms &amp; Efficiency (Video Project)</h1>
+
+        <div class="guide-section">
+            <h2>Overview</h2>
+            <p><strong>Difficulty:</strong> Medium<br>
+               <strong>Discipline:</strong> Mechanical/Automotive (levers, gearing, rolling resistance)<br>
+               <strong>Core value learned:</strong> How lever ratio and wheel radius set torque vs distance, and how to debug energy losses.</p>
+            <p><strong>Example build videos:</strong>
+                <ul>
+                    <li><a href="https://www.youtube.com/results?search_query=mousetrap+car+build" target="_blank">YouTube: Mousetrap car builds</a></li>
+                </ul>
+                The exact geometry varies, but the physics and tuning below are universal.
+            </p>
+        </div>
+
+        <div class="guide-section">
+            <h2>What You’ll Build</h2>
+            <p>A car powered by a spring-loaded torsion bar in a mousetrap. A long boom tied to the trap’s bar pulls a string wound around the drive axle.</p>
+        </div>
+
+        <div class="guide-section">
+            <h2>Tools & Materials</h2>
+            <ul>
+                <li>Standard mousetrap (classic snap type)</li>
+                <li>Lightweight base (foam board or thin plywood)</li>
+                <li>2 axles (wood/metal rods), 4 wheels (CDs, 3D-printed hubs, or toy wheels)</li>
+                <li>Drive string (thin cord/fishing line), boom (wood dowel ~30–50 cm)</li>
+                <li>Bushings (straws or eyelets), tape/glue, ruler, drill or awl</li>
+            </ul>
+        </div>
+
+        <div class="guide-section">
+            <h2>Engineering Prep — 3 Levers in Play</h2>
+            <ul>
+                <li><strong>Mousetrap lever:</strong> longer boom = more string pulled (distance) with less torque.</li>
+                <li><strong>Axle radius:</strong> smaller axle = more wraps (distance) with less torque at the wheel.</li>
+                <li><strong>Wheel radius:</strong> larger wheel = more distance per axle turn but needs more torque.</li>
+            </ul>
+        </div>
+
+        <div class="guide-section">
+            <h2>Build Steps</h2>
+            <ol>
+                <li><strong>Base:</strong> Cut a straight base ~30×12 cm. Mark true centerlines for axles (accuracy prevents scrub).</li>
+                <li><strong>Axle mounts:</strong> Glue/tape two straws at front and rear, square to the centerline.</li>
+                <li><strong>Wheels:</strong> Fit wheels to axles; ensure minimal wobble; add rubber bands or balloons around rims for traction.</li>
+                <li><strong>Mount the mousetrap:</strong> Center it with the snap bar pointing backward. Secure firmly (screws/zip ties if possible).</li>
+                <li><strong>Attach the boom:</strong> Lash/glue a dowel to the trap’s snap bar, pointing rearward (length 30–50 cm to start).</li>
+                <li><strong>Drive string:</strong> Tie one end to the boom tip; route the string forward over a small guide and back to the rear axle; tie a slip loop that slides off when fully unwound (so the car can coast).</li>
+                <li><strong>Wind &amp; launch:</strong> Rotate rear wheels to wind the string onto the axle while cocking the trap (careful!). Set down and release the trap to pull the string.</li>
+            </ol>
+        </div>
+
+        <div class="guide-section">
+            <h2>Tuning (this is where the learning happens)</h2>
+            <ul>
+                <li><strong>Doesn’t start / slips?</strong> Improve tire grip; clean the floor; reduce axle radius to up torque.</li>
+                <li><strong>Launches fast then stops:</strong> Increase boom length or reduce axle radius for more total string length (distance).</li>
+                <li><strong>Veers:</strong> Check axle parallelism; equalize wheel diameters; true any wobbly hubs.</li>
+                <li><strong>Trap slams before unwinding fully:</strong> Use a multi-wrap path or add a small pulley at the boom tip to change the take-up rate.</li>
+            </ul>
+        </div>
+
+        <div class="guide-section">
+            <h2>Why It Works</h2>
+            <p>It’s a gear-ratio problem in disguise. The product of (trap boom length / axle radius) and (wheel radius) sets the force and distance budget. Low rolling resistance (straight axles, smooth hubs) matters just as much as “power.”</p>
+        </div>
+
+        <div class="guide-section">
+            <h2>Safety</h2>
+            <ul>
+                <li>Mousetraps snap hard. Keep fingers clear when setting. Wear eye protection.</li>
+            </ul>
+        </div>
+
+        <div class="guide-section">
+            <h2>Extensions</h2>
+            <ul>
+                <li>Make a distance car (long boom, tiny axle) vs a speed car (short boom, big axle) and compare.</li>
+                <li>Add a one-way clutch (simple tape tab) so the car can coast after the string drops.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

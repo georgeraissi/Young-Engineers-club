@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Young Engineers Projects</title>
+    <style>
+        body {
+            background: #f0f8ff;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 32px;
+        }
+        h2 {
+            text-align: center;
+            color: #2a3b4c;
+            margin-bottom: 32px;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 24px;
+            background: linear-gradient(90deg, #4f8cff 0%, #38e8ff 100%);
+            color: #fff;
+            font-size: 1em;
+            font-weight: bold;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+        .back-btn:hover {
+            background: linear-gradient(90deg, #38e8ff 0%, #4f8cff 100%);
+        }
+        .projects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .project-box {
+            background: #e0eafc;
+            border-radius: 18px;
+            box-shadow: 0 4px 16px rgba(44,62,80,0.10);
+            padding: 18px 16px 24px 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 0;
+            min-height: 320px;
+            height: 320px;
+            width: 340px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .project-box:hover {
+            background: #cfdef3;
+        }
+        .project-title {
+            background: #cfdef3;
+            border-radius: 8px;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.15em;
+            margin-bottom: 12px;
+            padding: 8px 0;
+            color: #2a3b4c;
+        }
+        .project-img {
+            width: 100%;
+            max-width: 180px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 8px;
+            background: #dbeafe;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+        }
+        .project-desc {
+            background: #f7fbff;
+            border-radius: 8px;
+            padding: 8px 10px;
+            font-size: 0.98em;
+            color: #2a3b4c;
+            width: 100%;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <a href="young engineers.html" class="back-btn">&larr; Back</a>
+    <h2>Explore Our Projects</h2>
+    <div class="projects-grid">
+        <div class="project-box" onclick="window.location.href='python-course.html'">
+            <div class="project-title">Full Python Course</div>
+            <img class="project-img" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Course">
+            <div class="project-desc">A complete beginner-friendly Python course, step by step.</div>
+        </div>
+        <div class="project-box" onclick="window.location.href='fpv-drone-guide.html'">
+            <div class="project-title">FPV Drone Build Guide</div>
+            <img class="project-img" src="PXL_20250125_093809381.RAW-01.MP.COVER.jpg" alt="FPV Drone">
+            <div class="project-desc">Step-by-step guide to building a sub-250g 3.5-inch FPV freestyle drone.</div>
+        </div>
+        <div class="project-box" onclick="window.location.href='rubber-band-car.html'">
+            <div class="project-title">Rubber-Band Powered Car</div>
+            <img class="project-img" src="https://littlebinsforlittlehands.com/wp-content/uploads/2019/12/Rubber-Band-Car-STEM-Activity-1.png" alt="Rubber Band Car">
+            <div class="project-desc">Build a car powered by elastic energy and learn about friction and torque.</div>
+        </div>
+        <div class="project-box" onclick="window.location.href='popsicle-truss-bridge.html'">
+            <div class="project-title">Popsicle-Stick Truss Bridge</div>
+            <img class="project-img" src="https://i.ytimg.com/vi/nNQLqUY8QFI/maxresdefault.jpg" alt="Truss Bridge">
+            <div class="project-desc">Model bridge building and load testing with popsicle sticks and glue.</div>
+        </div>
+        <div class="project-box" onclick="window.location.href='rubber-band-airplane.html'">
+            <div class="project-title">Rubber-Band Powered Airplane</div>
+            <img class="project-img" src="https://content.instructables.com/FYT/LIHO/HH2VL27P/FYTLIHOHH2VL27P.jpg?auto=webp" alt="Rubber Band Airplane">
+            <div class="project-desc">Make a simple airplane and learn the basics of aerodynamics and stability.</div>
+        </div>
+        <div class="project-box" onclick="window.location.href='mousetrap-car.html'">
+            <div class="project-title">Mousetrap-Powered Car</div>
+            <img class="project-img" src="https://www.pitsco.com/cdn/shop/files/v2146_featured.jpg?v=1718223757&width=600" alt="Mousetrap Car">
+            <div class="project-desc">Explore levers and gearing with a car powered by a mousetrap spring.</div>
+        </div>
+        <div class="project-box" onclick="window.location.href='hydraulic-robotic-arm.html'">
+            <div class="project-title">Hydraulic Robotic Arm</div>
+            <img class="project-img" src="https://content.instructables.com/FYE/XGE0/J28352JJ/FYEXGE0J28352JJ.jpg?auto=webp&frame=1" alt="Hydraulic Robotic Arm">
+            <div class="project-desc">Build a robotic arm powered by syringes and water, and learn about hydraulics.</div>
+        </div>
+        <div class="project-box" onclick="window.location.href='crystal-radio.html'">
+            <div class="project-title">Bonus: Crystal (AM) Radio</div>
+            <img class="project-img" src="https://rimstar.org/equip/crystal_radios/crystal_radio_w_breadboard_an.jpg" alt="Crystal Radio">
+            <div class="project-desc">Build a battery-free radio and learn about resonance and rectification.</div>
+        </div>
+        <div class="project-box" onclick="window.location.href='potato-battery.html'">
+            <div class="project-title">Bonus: Potato/Lemon Battery Lab</div>
+            <img class="project-img" src="https://cdn.mos.cms.futurecdn.net/9YkBgu9HbgTEScMw5puZQS.jpg" alt="Potato Battery">
+            <div class="project-desc">Make a battery from potatoes or lemons and power an LED or voltmeter.</div>
+        </div>
+    </div>
+</body>

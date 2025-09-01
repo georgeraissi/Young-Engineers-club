@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>📻 Build a Crystal (AM) Radio — No Batteries</title>
+    <meta charset="utf-8" />
+    <style>
+        body { background: #f0f8ff; font-family: sans-serif; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 40px auto; background: #e0eafc; border-radius: 18px; box-shadow: 0 4px 16px rgba(44,62,80,0.10); padding: 32px 24px; }
+        h1, h2 { color: #2a3b4c; text-align: center; }
+        .back-btn { display: inline-block; margin-bottom: 24px; background: linear-gradient(90deg, #4f8cff 0%, #38e8ff 100%); color: #fff; font-size: 1em; font-weight: bold; padding: 10px 24px; border: none; border-radius: 12px; box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12); cursor: pointer; transition: background 0.3s; text-decoration: none; }
+        .back-btn:hover { background: linear-gradient(90deg, #38e8ff 0%, #4f8cff 100%); }
+        .guide-section { background: #f7fbff; border-radius: 12px; padding: 18px 16px; margin-bottom: 18px; }
+        ul, ol { margin-left: 18px; }
+        code, pre { background: #dbeafe; border-radius: 6px; padding: 2px 6px; font-family: 'Fira Mono', 'Consolas', monospace; }
+        a { color: #4f8cff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="projects.html" class="back-btn">&larr; Back</a>
+        <h1>📻 Build a Crystal (AM) Radio — No Batteries</h1>
+
+        <div class="guide-section">
+            <h2>Overview</h2>
+            <p><strong>Difficulty:</strong> Medium<br>
+               <strong>Discipline:</strong> Electrical/Signals (resonance, rectification, impedance)<br>
+               <strong>Core value learned:</strong> A tuned LC circuit selects a station; a diode detector rectifies AM; a high-impedance earphone converts it to sound — all passively.</p>
+        </div>
+
+        <div class="guide-section">
+            <h2>What You’ll Build</h2>
+            <p>You’ll wind a coil, add a variable capacitor (or a slider contact), connect a germanium diode + earphone, and use a good ground and long wire antenna.</p>
+        </div>
+
+        <div class="guide-section">
+            <h2>Tools & Parts</h2>
+            <ul>
+                <li>26–30 AWG magnet wire; cardboard tube (toilet-paper or 40 mm PVC)</li>
+                <li>Variable capacitor (365 pF typical) or a slider wiper on the coil</li>
+                <li>Germanium diode (1N34A) or Schottky (BAT41)</li>
+                <li>High-impedance earphone (crystal/ceramic or 2 kΩ+ earpiece)</li>
+                <li>Ground clip to radiator/cold-water pipe, long antenna wire (10–20 m)</li>
+                <li>Push pins, sandpaper, tape, small wood board for mounting</li>
+            </ul>
+        </div>
+
+        <div class="guide-section">
+            <h2>Build Overview</h2>
+            <ol>
+                <li><strong>Coil:</strong> Wind ~80–120 turns neatly on the tube; scrape enamel at a few points to create taps (or leave enamel and use a slider).</li>
+                <li><strong>Tuning:</strong> Connect the coil in series with a variable capacitor across the antenna/ground to form a resonant tank.</li>
+                <li><strong>Detector:</strong> From the coil/cap node, feed a diode to the earphone, then to ground.</li>
+                <li><strong>Antenna &amp; ground:</strong> Run the longest possible insulated wire as high/clear as you can; clip a good ground for return.</li>
+                <li><strong>Tune:</strong> Adjust the capacitor (or tap/slider) slowly; you’ll hear stations pop in/out.</li>
+            </ol>
+        </div>
+
+        <div class="guide-section">
+            <h2>Why It Works (plain-English)</h2>
+            <p>AM stations embed audio by varying amplitude of a carrier. Your LC tank resonates at one station’s frequency, boosting it; the diode rectifies the RF envelope; the earphone responds to the audio. No amplifier = needs strong stations + good antenna/ground.</p>
+        </div>
+
+        <div class="guide-section">
+            <h2>Safety</h2>
+            <ul>
+                <li>Don’t throw wires near power lines. Indoors, keep the antenna away from mains cables.</li>
+            </ul>
+        </div>
+
+        <div class="guide-section">
+            <h2>Extensions</h2>
+            <ul>
+                <li>Add an RF choke and parallel audio cap for better filtering.</li>
+                <li>Build a simple one-transistor audio amplifier to drive a small speaker.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
