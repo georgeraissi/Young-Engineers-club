@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🤖 Hydraulic Robotic Arm (Syringe Actuators) — Video Project</title>
+    <meta charset="utf-8" />
+    <style>
+        body { background: #f0f8ff; font-family: sans-serif; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 40px auto; background: #e0eafc; border-radius: 18px; box-shadow: 0 4px 16px rgba(44,62,80,0.10); padding: 32px 24px; }
+        h1, h2 { color: #2a3b4c; text-align: center; }
+        .back-btn { display: inline-block; margin-bottom: 24px; background: linear-gradient(90deg, #4f8cff 0%, #38e8ff 100%); color: #fff; font-size: 1em; font-weight: bold; padding: 10px 24px; border: none; border-radius: 12px; box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12); cursor: pointer; transition: background 0.3s; text-decoration: none; }
+        .back-btn:hover { background: linear-gradient(90deg, #38e8ff 0%, #4f8cff 100%); }
+        .guide-section { background: #f7fbff; border-radius: 12px; padding: 18px 16px; margin-bottom: 18px; }
+        ul, ol { margin-left: 18px; }
+        code, pre { background: #dbeafe; border-radius: 6px; padding: 2px 6px; font-family: 'Fira Mono', 'Consolas', monospace; }
+        a { color: #4f8cff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="projects.html" class="back-btn">&larr; Back</a>
+        <h1>🤖 Hydraulic Robotic Arm (Syringe Actuators) — Video Project</h1>
+
+        <div class="guide-section">
+            <h2>Overview</h2>
+            <p><strong>Difficulty:</strong> Medium<br>
+               <strong>Discipline:</strong> Mechanical/Mechatronics (Pascal’s Law, linkages, DOF)<br>
+               <strong>Core value learned:</strong> How fluid pressure transmits force and how lever geometry maps syringe motion to gripper motion.</p>
+            <p><strong>Reference build videos &amp; teacher resources:</strong>
+                <ul>
+                    <li><a href="https://www.instructables.com/CARDBOARD-Robotic-Hydraulic-Arm" target="_blank">Instructables: Hydraulic arm projects</a></li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="guide-section">
+            <h2>What You’re Building</h2>
+            <p>A cardboard arm with 3 DOF (base lift, elbow, gripper) powered by paired syringes and tubing filled with colored water.</p>
+        </div>
+
+        <div class="guide-section">
+            <h2>Tools & Materials</h2>
+            <ul>
+                <li>Cardboard or thin plywood; hot glue; utility knife; ruler/square</li>
+                <li>6–10 identical syringes (10–20 mL), flexible vinyl tubing to fit snugly</li>
+                <li>Water + food coloring (visualize flow)</li>
+                <li>Skewers/bolts as pivots; rubber bands or springs (return forces)</li>
+                <li>Binder clips, tape</li>
+            </ul>
+        </div>
+
+        <div class="guide-section">
+            <h2>Before You Build — Hydraulics in 60 Seconds</h2>
+            <ul>
+                <li><strong>Pascal’s Law:</strong> Pressure applied to a confined fluid is transmitted undiminished; force scales with piston area <code>F = P · A</code>.</li>
+                <li><strong>Master ↔ slave syringes:</strong> Equal diameters give 1:1 motion; different diameters trade force for travel.</li>
+                <li><strong>Linkages:</strong> The arm’s torque comes from both fluid force and lever arm where the syringe attaches.</li>
+            </ul>
+        </div>
+
+        <div class="guide-section">
+            <h2>Step-by-Step Build</h2>
+            <ol>
+                <li><strong>Sketch degrees of freedom:</strong> Base (rotate or just lift), elbow, gripper. Keep it simple for the first build: base lift, elbow lift, and a simple pinch gripper.</li>
+                <li><strong>Cut parts:</strong>
+                    <ul>
+                        <li>Base: wide U-frame to support the shoulder pivot.</li>
+                        <li>Upper arm ~15 cm; forearm ~15 cm; gripper 2 opposing jaws.</li>
+                        <li>Pivots: Use skewers/bolts through reinforced holes (double-layer cardboard at pivots). Ensure free motion without wobble.</li>
+                    </ul>
+                </li>
+                <li><strong>Mount syringes:</strong> Pair each actuator: one control syringe (in your hand) connected by tube to one arm syringe. Place arm syringes so they push/pull at sensible lever arms (not too close to the joint).</li>
+                <li><strong>Tubing &amp; fill:</strong> Fill lines completely (no bubbles) with colored water; secure to syringe nipples. Tape tubing along structure to avoid kinks.</li>
+                <li><strong>Gripper return:</strong> Add a small rubber band to reopen the gripper when fluid retracts.</li>
+                <li><strong>Test one axis at a time:</strong> Move the control syringe; look for leaks, flex, or binding. Reinforce as needed.</li>
+            </ol>
+        </div>
+
+        <div class="guide-section">
+            <h2>Tuning</h2>
+            <ul>
+                <li><strong>Not enough lift?</strong> Increase lever arm or use a larger area slave syringe (more force).</li>
+                <li><strong>Too little travel?</strong> Use a smaller slave or move the push-point farther from the joint.</li>
+                <li><strong>Jittery motion?</strong> Purge tiny bubbles; lubricate pivots; stiffen cardboard near joints.</li>
+            </ul>
+        </div>
+
+        <div class="guide-section">
+            <h2>Why It Works</h2>
+            <p>You’re mapping pressure × piston area into a joint torque via a lever. The arm is also a statics problem: joint torques must beat the moment created by link weight + payload.</p>
+        </div>
+
+        <div class="guide-section">
+            <h2>Safety</h2>
+            <ul>
+                <li>Don’t force syringes (they can pop lines). Use water, not oil, for easy cleanup.</li>
+            </ul>
+        </div>
+
+        <div class="guide-section">
+            <h2>Extensions</h2>
+            <ul>
+                <li>Add base rotation with another actuator.</li>
+                <li>Try pneumatics (air) and compare compressibility and control feel.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
