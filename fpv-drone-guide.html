@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🛠️ Complete Beginner’s Guide to Building a Sub-250g 3.5-inch FPV Freestyle Drone</title>
+    <style>
+        body {
+            background: #f0f8ff;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #e0eafc;
+            border-radius: 18px;
+            box-shadow: 0 4px 16px rgba(44,62,80,0.10);
+            padding: 32px 24px;
+        }
+        h1, h2 {
+            color: #2a3b4c;
+            text-align: center;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 24px;
+            background: linear-gradient(90deg, #4f8cff 0%, #38e8ff 100%);
+            color: #fff;
+            font-size: 1em;
+            font-weight: bold;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+        .back-btn:hover {
+            background: linear-gradient(90deg, #38e8ff 0%, #4f8cff 100%);
+        }
+        .guide-section {
+            background: #f7fbff;
+            border-radius: 12px;
+            padding: 18px 16px;
+            margin-bottom: 18px;
+        }
+        ul, ol {
+            margin-left: 18px;
+        }
+        .emoji-title {
+            font-size: 1.3em;
+            margin-right: 8px;
+        }
+        code, pre {
+            background: #dbeafe;
+            border-radius: 6px;
+            padding: 2px 6px;
+            font-family: 'Fira Mono', 'Consolas', monospace;
+        }
+        a {
+            color: #4f8cff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="projects.html" class="back-btn">&larr; Back</a>
+        <h1>🛠️ Complete Beginner’s Guide to Building a Sub-250g 3.5-inch FPV Freestyle Drone</h1>
+        <div class="guide-section">
+            <h2>Introduction</h2>
+            <p>This guide is based on the FPV drone build demonstrated in this <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank">YouTube video</a>, but expands upon it with a more detailed, step-by-step explanation that assumes no prior knowledge. The video is highly recommended to watch alongside this guide, as it provides helpful visual references while you work.</p>
+        </div>
+        <div class="guide-section">
+            <h2>1. Understanding the Project</h2>
+            <ul>
+                <li><strong>What is it?</strong> A sub-250g freestyle FPV (First Person View) drone. “Sub-250g” means the total weight with battery will be under 250 grams, which is important because many drone regulations worldwide are more relaxed under this weight limit.</li>
+                <li><strong>Why a 3.5-inch build?</strong> The “3.5-inch” refers to the maximum propeller size the frame supports. This size strikes a balance between agility, flight time, and stability, making it a popular freestyle class.</li>
+                <li><strong>What will it cost?</strong> About $160 USD for the build itself. You’ll also need a few extra things: a radio transmitter, FPV goggles, and LiPo batteries/charger.</li>
+            </ul>
+        </div>
+        <div class="guide-section">
+            <h2>2. Tools & Workspace Preparation</h2>
+            <ul>
+                <li>Soldering kit (soldering iron, fine tip, leaded solder, flux): To connect wires to your flight controller (FC) and electronic speed controller (ESC).</li>
+                <li>Wire cutters & strippers: To cut motor wires and prepare ends for soldering.</li>
+                <li>Precision screwdrivers (hex drivers 1.5 mm, 2 mm, Phillips): For assembling the frame and mounting components.</li>
+                <li>Tweezers or needle-nose pliers: Useful for holding tiny parts while soldering.</li>
+                <li>Heat-shrink tubing & electrical tape: For insulating wires and preventing shorts.</li>
+                <li>Smoke-stopper: A safety device to prevent frying your electronics on the first power-up.</li>
+                <li>Threadlocker (purple/blue): Prevents screws from loosening from vibration.</li>
+                <li>Digital scale: To ensure your build stays under 250g.</li>
+            </ul>
+            <p><strong>Tip:</strong> Set up a clean, well-lit desk with a silicone mat to protect your surface from solder burns.</p>
+        </div>
+        <div class="guide-section">
+            <h2>3. Parts List & Why They Matter</h2>
+            <ul>
+                <li><strong>Frame (3.5-inch)</strong> – The skeleton of your drone. Lightweight carbon fiber, designed for sub-250 builds.</li>
+                <li><strong>Motors (1404–1604 size)</strong> – Brushless motors with kV rating around 3500–4000, optimized for 4S batteries and 3.5-inch props.</li>
+                <li><strong>Flight Controller (FC) + 4-in-1 ESC</strong> – Often an AIO (All-in-One) board to save weight. Handles stabilization and motor control.</li>
+                <li><strong>Receiver (e.g., ELRS RP1)</strong> – Allows your transmitter (remote control) to communicate with the drone.</li>
+                <li><strong>FPV System</strong>
+                    <ul>
+                        <li>Digital option: DJI O4 Lite or O3 Air Unit (better video quality, slightly heavier).</li>
+                        <li>Analog option: Camera + VTX (lighter, cheaper, but lower image quality).</li>
+                    </ul>
+                </li>
+                <li><strong>Propellers (3.5-inch tri-blade)</strong> – Balance of thrust, efficiency, and control.</li>
+                <li><strong>Battery (4S 650–850 mAh LiPo)</strong> – Powers the entire system. Smaller = lighter, larger = longer flight time.</li>
+                <li><strong>Miscellaneous:</strong> Antennas, screws, vibration dampeners, battery strap, and 3D-printed mounts (often free to download).</li>
+            </ul>
+            <p><strong>Tip:</strong> Always check that your parts are compatible — especially that the frame can house your chosen flight stack and FPV system.</p>
+        </div>
+        <div class="guide-section">
+            <h2>4. Dry Assembly (Test Fit Everything)</h2>
+            <ul>
+                <li>Assemble the frame and loosely place each component to see how they’ll fit.</li>
+                <li>Mount motors temporarily to confirm wire reach.</li>
+                <li>Test how the FC stack fits in the frame.</li>
+                <li>Hold the camera in place to check cable clearance.</li>
+                <li>Decide cable routing paths (front to back, sides).</li>
+            </ul>
+            <p>This step prevents headaches later when you realize a cable won’t reach or a screw is too short.</p>
+        </div>
+        <div class="guide-section">
+            <h2>5. Soldering & Wiring the Electronics</h2>
+            <ul>
+                <li>Tin your pads: Apply a small blob of solder to each pad on the FC where you’ll attach wires.</li>
+                <li>Motor wires → ESC pads: Cut wires to length (slightly loose, not tight). Solder each to the motor pads.</li>
+                <li>Receiver → UART pads: Connect signal, power (5V), and ground.</li>
+                <li>FPV system → FC:
+                    <ul>
+                        <li>Power from the 9V BEC output (important because some cameras can’t handle full 4S voltage).</li>
+                        <li>Video signal wire goes to the FC’s “Video In” pad.</li>
+                        <li>Ground to any ground pad.</li>
+                    </ul>
+                </li>
+                <li>Buzzer (optional): Connect to dedicated buzzer pads for lost drone recovery.</li>
+            </ul>
+            <p><strong>Tips for soldering success:</strong></p>
+            <ul>
+                <li>Always keep iron tip clean with a damp sponge.</li>
+                <li>Use flux if solder doesn’t stick well.</li>
+                <li>Double-check polarity (red = positive, black = ground). Reversing can destroy components instantly.</li>
+            </ul>
+        </div>
+        <div class="guide-section">
+            <h2>6. Assembling the Stack</h2>
+            <ul>
+                <li>Mount the ESC/FC board on vibration-dampened rubber grommets.</li>
+                <li>Add spacers if cables feel pinched.</li>
+                <li>Secure with long M2 screws.</li>
+                <li>Plug in or solder the FPV system, ensuring no sharp bends in the camera cable.</li>
+            </ul>
+            <p><strong>Tip:</strong> Use threadlocker sparingly on screws to prevent vibration loosening.</p>
+        </div>
+        <div class="guide-section">
+            <h2>7. Mounting Camera, Antenna & Receiver</h2>
+            <ul>
+                <li>Camera: Secure in the front cage using supplied side plates or 3D-printed mounts. Adjust tilt angle based on flying style (20°–30° for beginners).</li>
+                <li>VTX antenna: Mount at the rear, angled up and away from props.</li>
+                <li>Receiver antenna: Use heat-shrink or 3D-printed tubes to position them at 45° angles for better signal coverage.</li>
+            </ul>
+        </div>
+        <div class="guide-section">
+            <h2>8. Weight Management</h2>
+            <ul>
+                <li>Trim wires to the shortest safe length.</li>
+                <li>Use a lightweight buzzer or skip it if your receiver has a beeper mode.</li>
+                <li>Choose a 650 mAh battery if you’re close to the limit.</li>
+                <li>Consider switching to an AIO board if using separate FC/ESC adds too much weight.</li>
+            </ul>
+            <p><strong>Target weight:</strong> ~240–245g with battery, to stay safely under 250g.</p>
+        </div>
+        <div class="guide-section">
+            <h2>9. First Power-Up (Smoke Stopper Test)</h2>
+            <ul>
+                <li>Connect the drone to a smoke stopper before plugging into a LiPo.</li>
+                <li>If the light stays green (or bulb doesn’t glow), your wiring is safe.</li>
+                <li>If it trips, disconnect immediately and re-inspect soldering.</li>
+                <li>Once it passes, connect the drone to your computer via USB.</li>
+            </ul>
+        </div>
+        <div class="guide-section">
+            <h2>10. Firmware Setup (Betaflight)</h2>
+            <ul>
+                <li>Install Betaflight Configurator (free software).</li>
+                <li>Connect drone via USB.</li>
+                <li>Flash latest stable firmware for your FC.</li>
+                <li>Calibrate accelerometer.</li>
+                <li>Set receiver protocol (e.g., ELRS).</li>
+                <li>Configure video system (digital/analog).</li>
+                <li>Test motor directions (use props OFF). Reverse any incorrect ones in Betaflight.</li>
+                <li>Set arming switch, beeper switch, and flight modes on your transmitter.</li>
+            </ul>
+        </div>
+        <div class="guide-section">
+            <h2>11. Propellers, Battery & Final Assembly</h2>
+            <ul>
+                <li>Install propellers (check correct rotation direction).</li>
+                <li>Strap battery securely with a rubberized strap + pad.</li>
+                <li>Re-check screws, cables, and antenna positions.</li>
+                <li>Weigh the finished build.</li>
+            </ul>
+        </div>
+        <div class="guide-section">
+            <h2>12. First Flight Test</h2>
+            <ul>
+                <li>Go to an open field.</li>
+                <li>Arm motors without props to ensure everything responds.</li>
+                <li>With props on, throttle up gently and hover at low altitude.</li>
+                <li>Check stick response and FPV feed.</li>
+                <li>If it drifts heavily, re-calibrate or check for mechanical issues.</li>
+            </ul>
+        </div>
+        <div class="guide-section">
+            <h2>13. Tuning & Improvements</h2>
+            <ul>
+                <li>Adjust rates (stick sensitivity) for smoother flying.</li>
+                <li>Experiment with different propellers (pitch and blade count) for flight style.</li>
+                <li>Record DVR footage and review flight characteristics.</li>
+            </ul>
+        </div>
+        <div class="guide-section">
+            <h2>14. Maintenance & Safety</h2>
+            <ul>
+                <li>Always discharge and store LiPos safely in fireproof bags.</li>
+                <li>Inspect screws and props before flights.</li>
+                <li>Keep antennas clear of props.</li>
+                <li>Clean frame and electronics if exposed to dirt or moisture.</li>
+            </ul>
+        </div>
+        <div class="guide-section">
+            <h2>✅ Finished!</h2>
+            <p>At this point, you’ll have a fully functional sub-250g freestyle FPV drone, built by hand, ready for tuning and flights.</p>
+        </div>
+    </div>
+</body>
+</html>

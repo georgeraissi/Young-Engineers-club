@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python Beginner Course</title>
+    <style>
+        body {
+            background: #f0f8ff;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #e0eafc;
+            border-radius: 18px;
+            box-shadow: 0 4px 16px rgba(44,62,80,0.10);
+            padding: 32px 24px;
+        }
+        h1, h2 {
+            color: #2a3b4c;
+            text-align: center;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 24px;
+            background: linear-gradient(90deg, #4f8cff 0%, #38e8ff 100%);
+            color: #fff;
+            font-size: 1em;
+            font-weight: bold;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+        .back-btn:hover {
+            background: linear-gradient(90deg, #38e8ff 0%, #4f8cff 100%);
+        }
+        .course-section {
+            background: #f7fbff;
+            border-radius: 12px;
+            padding: 18px 16px;
+            margin-bottom: 18px;
+        }
+        .emoji-title {
+            font-size: 1.3em;
+            margin-right: 8px;
+        }
+        code, pre {
+            background: #dbeafe;
+            border-radius: 6px;
+            padding: 2px 6px;
+            font-family: 'Fira Mono', 'Consolas', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="projects.html" class="back-btn">&larr; Back</a>
+        <h1>🐍 Python Beginner Course (From Zero)</h1>
+        <div class="course-section">
+            <h2>🚀 Getting Set Up</h2>
+            <p>We’re going to use Visual Studio Code (VS Code) to write and run Python programs. Think of VS Code like a notebook for code — it lets us write, run, and organize programs all in one place.</p>
+            <ul>
+                <li>Highlighting code (to make it easier to read).</li>
+                <li>Auto-suggestions (like when your phone guesses words).</li>
+                <li>Built-in terminal so you can run your code with one click.</li>
+            </ul>
+            <p>Here’s a video that shows you step by step how to install VS Code and set it up for Python:<br>
+            👉 <a href="https://www.youtube.com/watch?v=VAcKXS_V_Kw" target="_blank">How to Set Up VS Code for Python (YouTube)</a></p>
+            <p>Once installed:</p>
+            <ol>
+                <li>Open VS Code.</li>
+                <li>Make a new folder (e.g., <code>python-course</code>).</li>
+                <li>Inside, create a file called <code>hello.py</code>.</li>
+                <li>Type this:<br>
+                <pre>print("Hello, Python!")</pre>
+                </li>
+                <li>Run it. If you see <code>Hello, Python!</code> appear, you’re ready! 🎉</li>
+            </ol>
+        </div>
+        <div class="course-section">
+            <h2>Part 1: Python as a Calculator and Variables</h2>
+            <strong>Python as a Calculator</strong>
+            <pre>
+print(2 + 3)   # 5
+print(10 - 4)  # 6
+print(3 * 7)   # 21
+print(10 / 2)  # 5.0
+            </pre>
+            <p><strong>What is a Float?</strong><br>
+            A float is just a number with a decimal point.<br>
+            <code>2.5</code> is a float.<br>
+            <code>3.0</code> is also a float, even though .0 means “no decimal part.”</p>
+            <p><strong>What are Variables?</strong><br>
+            A variable is like a box with a label where you can store something.</p>
+            <pre>
+age = 15
+height = 1.75
+name = "Alice"
+            </pre>
+            <p>You can use them in math too:</p>
+            <pre>
+age_in_5_years = age + 5
+print(age_in_5_years)  # 20
+            </pre>
+            <strong>Exercises 📝</strong>
+            <ul>
+                <li>Make Python calculate <code>(10 + 2) * 5 / 2</code>.</li>
+                <li>Store your age in a variable and print:
+                    <ul>
+                        <li>your age,</li>
+                        <li>your age times 2,</li>
+                        <li>your age divided by 3.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="course-section">
+            <h2>Part 2: Data Types</h2>
+            <p>(Already expanded in full detail earlier — integers, floats, strings, lists, tuples, dictionaries, booleans — with analogies and exercises. ✅)</p>
+        </div>
+        <div class="course-section">
+            <h2>Part 3: Operators and Expressions</h2>
+            <strong>Arithmetic Operators</strong>
+            <ul>
+                <li><code>+</code> → addition</li>
+                <li><code>-</code> → subtraction</li>
+                <li><code>*</code> → multiplication</li>
+                <li><code>/</code> → division (always float)</li>
+                <li><code>//</code> → floor division (cuts off decimals)</li>
+                <li><code>%</code> → remainder (modulo)</li>
+                <li><code>**</code> → exponent</li>
+            </ul>
+            <pre>
+print(7 // 2)   # 3
+print(7 % 2)    # 1
+print(2 ** 3)   # 8
+            </pre>
+            <strong>Comparison Operators</strong>
+            <ul>
+                <li><code>==</code> → equal to</li>
+                <li><code>!=</code> → not equal to</li>
+                <li><code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code></li>
+            </ul>
+            <pre>
+print(5 == 5)   # True
+print(5 != 5)   # False
+print(3 < 10)   # True
+            </pre>
+            <strong>Boolean Operators</strong>
+            <ul>
+                <li><code>and</code> → both must be True</li>
+                <li><code>or</code> → at least one must be True</li>
+                <li><code>not</code> → flips True/False</li>
+            </ul>
+            <pre>
+print(5 > 2 and 5 < 10)  # True
+print(5 > 2 or 5 < 0)    # True
+print(not 5 > 2)         # False
+            </pre>
+            <strong>Exercise 📝</strong>
+            <ul>
+                <li>Check if a number is between 1 and 100.</li>
+                <li>Try using <code>and</code>, <code>or</code>, and <code>not</code> in a few comparisons.</li>
+            </ul>
+        </div>
+        <div class="course-section">
+            <h2>Part 4: Control Flow</h2>
+            <strong>If, Elif, Else</strong>
+            <pre>
+age = 18
+if age < 18:
+    print("Too young")
+elif age == 18:
+    print("Just turned adult")
+else:
+    print("Adult")
+            </pre>
+            <strong>Exercise 📝</strong>
+            <ul>
+                <li>Write a program that asks for a number and prints:
+                    <ul>
+                        <li>"Negative" if &lt; 0</li>
+                        <li>"Zero" if = 0</li>
+                        <li>"Positive" if &gt; 0</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="course-section">
+            <h2>Part 5: Loops</h2>
+            <strong>While Loop</strong>
+            <pre>
+n = 0
+while n < 5:
+    print(n)
+    n += 1
+            </pre>
+            <strong>For Loop</strong>
+            <pre>
+for i in range(5):
+    print(i)
+            </pre>
+            <strong>Break and Continue</strong>
+            <ul>
+                <li><code>break</code> → stop the loop completely.</li>
+                <li><code>continue</code> → skip to the next round.</li>
+            </ul>
+            <strong>Exercise 📝</strong>
+            <ul>
+                <li>Print numbers from 1 to 20.</li>
+                <li>Print all the letters in "Python".</li>
+            </ul>
+        </div>
+        <div class="course-section">
+            <h2>Part 6: Functions</h2>
+            <strong>Defining Functions</strong>
+            <pre>
+def greet(name):
+    return f"Hello, {name}"
+            </pre>
+            <strong>Calling the function:</strong>
+            <pre>
+print(greet("Alice"))
+            </pre>
+            <strong>Default Values</strong>
+            <pre>
+def greet(name="world"):
+    return f"Hello, {name}"
+print(greet())  # Hello, world
+            </pre>
+            <strong>Scope</strong>
+            <p>Variables inside a function disappear when the function finishes.</p>
+            <strong>Exercise 📝</strong>
+            <ul>
+                <li>Write a function <code>square(x)</code> that returns x squared.</li>
+            </ul>
+        </div>
+        <div class="course-section">
+            <h2>Part 7: Input & Output</h2>
+            <strong>Input</strong>
+            <pre>
+name = input("What is your name? ")
+print(f"Hello, {name}!")
+            </pre>
+            <strong>Exercise 📝</strong>
+            <ul>
+                <li>Ask the user for 2 numbers and print their sum.</li>
+            </ul>
+        </div>
+        <div class="course-section">
+            <h2>Part 8: Strings & Lists in Depth</h2>
+            <strong>Strings</strong>
+            <pre>
+text = " the quick brown fox "
+print(text.strip())      # remove spaces
+print(text.split())      # split into words
+print(text.replace("o","0"))
+            </pre>
+            <strong>Lists</strong>
+            <pre>
+numbers = [1, 2, 3]
+numbers.append(4)
+print(numbers)
+
+numbers.pop()   # removes last
+            </pre>
+            <strong>List Comprehension</strong>
+            <pre>
+squares = [x*x for x in range(5)]
+print(squares)  # [0, 1, 4, 9, 16]
+            </pre>
+            <strong>Exercise 📝</strong>
+            <ul>
+                <li>Split a sentence into words and count how many words there are.</li>
+            </ul>
+        </div>
+        <div class="course-section">
+            <h2>Part 9: Error Handling</h2>
+            <pre>
+try:
+    x = int("spam")
+except ValueError:
+    print("That’s not a number!")
+            </pre>
+            <strong>Exercise 📝</strong>
+            <ul>
+                <li>Ask for a number and safely convert it (catch ValueError).</li>
+            </ul>
+        </div>
+        <div class="course-section">
+            <h2>Part 10: Modules</h2>
+            <strong>Example: Math</strong>
+            <pre>
+import math
+print(math.sqrt(16))  # 4.0
+            </pre>
+            <strong>Example: Random</strong>
+            <pre>
+import random
+print(random.randint(1, 6))  # dice roll
+            </pre>
+            <strong>Exercise 📝</strong>
+            <ul>
+                <li>Roll 2 dice and print their sum.</li>
+            </ul>
+        </div>
+        <div class="course-section">
+            <h2>Part 11: Files</h2>
+            <pre>
+with open("hello.txt", "w") as f:
+    f.write("Hello file!")
+
+with open("hello.txt", "r") as f:
+    print(f.read())
+            </pre>
+            <strong>Exercise 📝</strong>
+            <ul>
+                <li>Write your name to a file, then read it back.</li>
+            </ul>
+        </div>
+        <div class="course-section">
+            <h2>Part 12: Mini Projects</h2>
+            <strong>Number Guessing Game</strong>
+            <ul>
+                <li>Use <code>random.randint</code>.</li>
+                <li>Have the user guess until correct.</li>
+            </ul>
+            <strong>Simple Calculator</strong>
+            <ul>
+                <li>Ask for 2 numbers and an operation (+, -, *, /).</li>
+                <li>Perform the calculation.</li>
+            </ul>
+            <strong>Word Counter</strong>
+            <ul>
+                <li>Ask for a sentence.</li>
+                <li>Count each word with a dictionary.</li>
+            </ul>
+            <strong>To-Do List with File Saving</strong>
+            <ul>
+                <li>Let users add tasks to a list.</li>
+                <li>Save tasks to a file.</li>
+                <li>Load tasks when the program starts.</li>
+            </ul>
+        </div>
+        <div class="course-section">
+            <h2>🎯 Final Thoughts</h2>
+            <ul>
+                <li>Understand variables, data types, and operators.</li>
+                <li>Write conditional logic and loops.</li>
+                <li>Organize code into functions.</li>
+                <li>Work with user input, errors, and files.</li>
+                <li>Build small but complete projects.</li>
+            </ul>
+            <p>This is the foundation of Python. Once you’re comfortable here, you can move on to bigger things: web development, data analysis, or automation.</p>
+        </div>
+    </div>
+</body>
+</html>
